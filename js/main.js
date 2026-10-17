@@ -78,8 +78,11 @@
 
   let W = 0, H = 0, DPR = 1, yaw = -.62, yawT = -.62, pitch = .36, introP = reduce ? 0 : 1, pS = 0, mx = 0, my = 0, mxS = 0, myS = 0;
   function size() {
-    DPR = Math.min(devicePixelRatio || 1, 2);
-    W = stage.clientWidth; H = stage.clientHeight;
+    const w = stage.clientWidth, h = stage.clientHeight;
+    const d = Math.min(devicePixelRatio || 1, w < 760 ? 1.5 : 2);
+    // スマホはアドレスバーの出入りでも resize が来るので、寸法が変わらなければ canvas を作り直さない
+    if (w === W && h === H && d === DPR) return;
+    W = w; H = h; DPR = d;
     cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR); ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   }
   const easeIO = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
@@ -227,7 +230,13 @@
 
   function layout() { size(); sizeProc(); sizeMq(); }
   layout();
-  addEventListener('resize', () => { clearTimeout(layout.t); layout.t = setTimeout(layout, 120); });
+  let lastW = innerWidth;
+  addEventListener('resize', () => {
+    // 幅が同じ（＝アドレスバーの出入りだけ）ならスマホでは組み直さない
+    if (!wide.matches && innerWidth === lastW) return;
+    lastW = innerWidth;
+    clearTimeout(layout.t); layout.t = setTimeout(layout, 120);
+  });
   addEventListener('load', layout);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
   if ('ResizeObserver' in window) new ResizeObserver(() => { sizeProc(); sizeMq(); }).observe(ptrack);
@@ -244,8 +253,13 @@
     const y = scrollY, vh = innerHeight;
     vel = lerp(vel, y - lastY, .15); lastY = y;
 
-    if (!reduce) introP = 1 - easeIO(clamp((now - t0 - 100) / 2600));
+    // 先に位置をまとめて読み、そのあとで書き込む（読み書きが交互になると毎フレーム再レイアウトが走りカクつく）
     const hr = hero.getBoundingClientRect();
+    const pr = wide.matches ? proc.getBoundingClientRect() : null;
+    const cardMids = wide.matches ? null : pcards.map(c => { const b = c.getBoundingClientRect(); return b.top + b.height / 2; });
+    const parRects = reduce ? [] : pars.map(img => img.parentElement.getBoundingClientRect());
+
+    if (!reduce) introP = 1 - easeIO(clamp((now - t0 - 100) / 2600));
     const pRaw = clamp(-hr.top / Math.max(1, hr.height - vh));
     pS = reduce ? pRaw : lerp(pS, pRaw, .1);
     if (Math.abs(pS - pRaw) < .0005) pS = pRaw;
@@ -262,8 +276,8 @@
       mq.style.transform = `translate3d(${mqX.toFixed(2)}px,0,0) skewX(${reduce ? 0 : clamp(-vel * .25, -10, 10).toFixed(2)}deg)`;
     }
 
-    if (wide.matches) {
-      const r = proc.getBoundingClientRect();
+    if (pr) {
+      const r = pr;
       if (r.bottom > 0 && r.top < vh) {
         const pp = clamp(-r.top / Math.max(1, r.height - vh));
         ptrack.style.transform = `translate3d(${(-pDist * pp).toFixed(1)}px,0,0)`;
@@ -273,15 +287,15 @@
         pCount.textContent = '0' + (idx + 1);
       }
     } else {
-      let best = -1, bd = 1e9; pcards.forEach((c, i) => { const b = c.getBoundingClientRect(); const d = Math.abs(b.top + b.height / 2 - vh * .5); if (d < bd) { bd = d; best = i; } }); pcards.forEach((c, i) => c.classList.toggle('on', i === best));
+      let best = -1, bd = 1e9; cardMids.forEach((m, i) => { const d = Math.abs(m - vh * .5); if (d < bd) { bd = d; best = i; } }); pcards.forEach((c, i) => c.classList.toggle('on', i === best));
     }
 
-    if (!reduce) for (const img of pars) {
-      const b = img.parentElement.getBoundingClientRect();
-      if (b.bottom < 0 || b.top > vh) continue;
+    if (!reduce) pars.forEach((img, i) => {
+      const b = parRects[i];
+      if (b.bottom < 0 || b.top > vh) return;
       const k = (b.top + b.height / 2 - vh / 2) / vh;
       img.style.setProperty('--py', (-6.5 - k * 7).toFixed(2) + '%');
-    }
+    });
     requestAnimationFrame(loop);
   }
   requestAnimationFrame(loop);
