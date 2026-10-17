@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="img/logo.png">
+<title>TENDOU 解体工事</title>
+<meta name="description" content="岐阜県多治見市の解体工事業者 TENDOU。木造・鉄骨造・RC造の建物解体から内装解体、外構撤去まで、現地調査から整地まで自社一貫施工。見積・現地調査無料。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header class="hdr" id="hdr">
+  <div class="wrap in">
+    <a class="brand" href="#top" aria-label="TENDOU トップへ">
+      <img src="img/logo-light.png" alt="TENDOU">
+      <small>DEMOLITION<br>WORKS</small>
+    </a>
+    <nav class="nav" id="nav" aria-label="メインメニュー">
+      <a href="#types">解体工事<span class="en">DEMOLITION</span></a>
+      <a href="#why">選ばれる理由<span class="en">WHY</span></a>
+      <a href="#process">工事の流れ<span class="en">PROCESS</span></a>
+      <a href="#more">付帯サービス<span class="en">SERVICES</span></a>
+      <a href="#works">施工事例<span class="en">WORKS</span></a>
+      <a href="#company">会社概要<span class="en">COMPANY</span></a>
+      <a class="btn solid" href="#contact">無料見積り<span class="ar"></span></a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="メニュー" aria-expanded="false" aria-controls="nav"><i></i><i></i></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero intro-wait" id="hero" aria-label="TENDOU 解体工事">
+    <div class="stage" id="stage">
+      <canvas id="cv" aria-hidden="true"></canvas>
+      <div class="grain" aria-hidden="true"></div>
+      <div class="drag-tip" id="dragTip" aria-hidden="true">DRAG TO ROTATE</div>
+
+      <div class="meter" aria-hidden="true">
+        <div class="pct"><span>解体進捗</span><b id="pct">000<small>%</small></b></div>
+        <span class="now" id="phaseNow">建物</span>
+        <ol id="phases">
+          <li><span>01</span><span>屋根材・外装の撤去</span></li>
+          <li><span>02</span><span>上屋の解体</span></li>
+          <li><span>03</span><span>基礎の撤去・搬出</span></li>
+          <li><span>04</span><span>整地・お引渡し</span></li>
+        </ol>
+      </div>
+
+      <div class="hero-copy">
+        <div class="wrap">
+          <p class="label"><i></i>Demolition works — Tajimi, Gifu</p>
+          <div class="heads">
+            <h1><span class="ln"><span>壊すことは、</span></span><span class="ln"><span>つぎを<em>建てる</em>こと。</span></span></h1>
+            <p class="h1b" aria-hidden="true"><span class="ln"><span>更地から、</span></span><span class="ln"><span>つぎが<em>はじまる</em>。</span></span></p>
+          </div>
+          <div class="hero-row">
+            <p class="hero-lead">木造・鉄骨造・RC造の建物解体から、内装解体、外構の撤去まで。現地調査から整地・お引渡しまでを自社で一貫して施工します。岐阜県多治見市を拠点に、岐阜・愛知・長野で対応しています。</p>
+            <div class="hero-cta">
+              <a class="btn solid" href="#contact">無料で見積りを依頼<span class="ar"></span></a>
+              <a class="btn" href="#types">解体工事について</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true">SCROLL TO DEMOLISH</div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="row" id="mq">
+      <span>Demolition</span><span>Dismantle</span><span>Separate</span><span>Clear the site</span>
+      <span>Demolition</span><span>Dismantle</span><span>Separate</span><span>Clear the site</span>
+    </div>
+  </div>
+
+  <section class="concept" aria-labelledby="cTitle">
+    <div class="wrap">
+      <p class="label"><i></i>Concept</p>
+      <div class="grid">
+        <h2 class="h2 lines" id="cTitle"><span class="ln"><span>解体は、終わりではなく、</span></span><span class="ln"><span>土地の「つぎ」をつくる</span></span><span class="ln"><span>最初の工程です。</span></span></h2>
+        <div class="body rv">
+          <p>建て替え、売却、駐車場、新しい店。建物を解体したあとの土地には、それぞれの「つぎ」があります。</p>
+          <p>TENDOUは、建物を安全に壊し、廃材を種類ごとに分けて運び出し、土地を平らに整えてお返しするまでを自社で行います。施主さまにも近隣の方にも、気持ちよく次へ進んでいただくための解体を心がけています。</p>
+        </div>
+      </div>
+      <div class="specs">
+        <div class="spec rv"><span class="mono">Estimate</span><b>現地調査・見積り無料</b><p>ご契約まで費用はかかりません</p></div>
+        <div class="spec rv"><span class="mono">Area</span><b>岐阜・愛知・長野</b><p>多治見市・土岐市・瑞浪市・可児市を中心に対応</p></div>
+        <div class="spec rv"><span class="mono">Open</span><b>月曜〜土曜</b><p>日曜定休。緊急時はお電話ください</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="types" id="types" aria-labelledby="tTitle">
+    <div class="wrap">
+      <div class="types-head">
+        <div>
+          <p class="label"><i></i>Demolition</p>
+          <h2 class="h2 lines" id="tTitle" style="margin-top:24px"><span class="ln"><span>構造を選ばず、</span></span><span class="ln"><span>解体します。</span></span></h2>
+        </div>
+        <p class="rv">住宅一棟の解体から、店舗の内装解体、ブロック塀一枚の撤去まで。建物の構造と規模、立地に合わせて、手壊しと重機を使い分けます。</p>
+      </div>
+      <div class="tlist">
+        <article class="trow rv"><span class="code">W</span><h3>木造解体<small>WOODEN STRUCTURE</small></h3><p>木造住宅・倉庫・納屋など。瓦や木くず、ガラを分別しながら解体します。</p><div class="tags"><span>住宅</span><span>倉庫・納屋</span><span>古民家</span></div></article>
+        <article class="trow rv"><span class="code">S</span><h3>鉄骨造解体<small>STEEL STRUCTURE</small></h3><p>鉄骨造の店舗・倉庫・車庫など。鉄骨の切断から搬出まで対応します。</p><div class="tags"><span>店舗</span><span>倉庫</span><span>車庫</span></div></article>
+        <article class="trow rv"><span class="code">RC</span><h3>RC造解体<small>REINFORCED CONCRETE</small></h3><p>鉄筋コンクリート造の建物や基礎、擁壁などの解体・撤去を行います。</p><div class="tags"><span>建物</span><span>基礎</span><span>擁壁</span></div></article>
+        <article class="trow rv"><span class="code">IN</span><h3>内装解体<small>INTERIOR STRIP-OUT</small></h3><p>テナント退去時の原状回復や、リフォーム前のスケルトン解体に。</p><div class="tags"><span>店舗</span><span>事務所</span><span>住宅</span></div></article>
+        <article class="trow rv"><span class="code">VH</span><h3>空き家解体<small>VACANT HOUSE</small></h3><p>相続した空き家や古家に。家財が残ったままでも、片付けから一括でお受けします。</p><div class="tags"><span>家財撤去込み</span><span>相続物件</span></div></article>
+        <article class="trow rv"><span class="code">EX</span><h3>外構・付帯撤去<small>EXTERIOR</small></h3><p>ブロック塀、カーポート、土間コンクリート、庭木・庭石の撤去。</p><div class="tags"><span>ブロック塀</span><span>カーポート</span><span>庭木</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="why" id="why" aria-labelledby="wTitle">
+    <div class="wrap grid">
+      <div class="side">
+        <p class="label"><i></i>Why TENDOU</p>
+        <h2 class="h2 lines" id="wTitle" style="margin-top:24px"><span class="ln"><span>窓口ひとつで、</span></span><span class="ln"><span>更地まで。</span></span></h2>
+        <p class="rv">解体の前後には、片付け、伐採、清掃といった作業がついてきます。TENDOUはそれらをまとめて自社で引き受けます。</p>
+      </div>
+      <div>
+        <div class="why-item rv"><div><span class="k">One-stop</span><h3>調査から整地まで<br>自社で一貫施工</h3></div><p>現地調査、お見積り、解体、分別・搬出、整地まで、同じ会社が担当します。連絡先がひとつなので、確認や伝達の行き違いが起きません。</p></div>
+        <div class="why-item rv"><div><span class="k">Clear-out</span><h3>家財が残ったままでも<br>そのままご相談を</h3></div><p>便利屋として始まったTENDOUは、残置物の撤去、樹木の伐採、清掃まで自社で対応できます。解体前の片付けを別の業者に頼む必要はありません。</p></div>
+        <div class="why-item rv"><div><span class="k">Neighbors</span><h3>近隣への配慮を<br>工程に組み込む</h3></div><p>着工前のご挨拶、養生シートによる飛散対策、作業時間への配慮。周りの暮らしを守りながら工事を進めます。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process" aria-labelledby="pTitle">
+    <div class="pin">
+      <div class="wrap ptop">
+        <div>
+          <p class="label"><i></i>Process</p>
+          <h2 class="h2" id="pTitle" style="margin-top:20px">ご相談からお引渡しまで</h2>
+        </div>
+        <p class="count" aria-hidden="true"><b id="pCount">01</b> / 05</p>
+      </div>
+      <div class="ptrack" id="ptrack">
+        <article class="pcard on"><span class="n">01</span><div><h3>お問い合わせ</h3><p>お電話・LINE・フォームからご連絡ください。所在地と構造、おおよその広さが分かれば概算をお伝えできます。</p></div></article>
+        <article class="pcard"><span class="n">02</span><div><h3>現地調査・お見積り<span class="free">FREE</span></h3><p>建物の構造、敷地と搬出経路、残置物の量を確認し、内訳の分かるお見積りをお出しします。</p></div></article>
+        <article class="pcard"><span class="n">03</span><div><h3>ご契約・近隣へのご挨拶</h3><p>工事日程を決め、着工前に近隣の皆さまへご挨拶に伺います。</p></div></article>
+        <article class="pcard"><span class="n">04</span><div><h3>養生・解体・分別</h3><p>養生シートで囲ってから解体し、廃材を種類ごとに分別して搬出します。</p></div></article>
+        <article class="pcard"><span class="n">05</span><div><h3>整地・お引渡し</h3><p>基礎や地中の障害物を撤去して整地し、仕上がりをご確認いただいてお引渡しです。</p></div></article>
+      </div>
+      <div class="pbar" aria-hidden="true"><i id="pbar"></i></div>
+    </div>
+  </section>
+
+  <section class="more" id="more" aria-labelledby="mTitle">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="label"><i></i>With demolition</p>
+          <h2 class="h2 lines" id="mTitle" style="margin-top:24px"><span class="ln"><span>解体とあわせて、</span></span><span class="ln"><span>まとめて頼める。</span></span></h2>
+        </div>
+        <p class="rv">解体前の片付けや、敷地の樹木、退去後の部屋の補修と清掃まで。単独のご依頼もお受けしています。</p>
+      </div>
+      <div class="mgrid">
+        <article class="mcard rv"><div class="ph clip"><img src="img/zanchi-before.jpg" alt="家財やごみが残されたベランダ" loading="lazy" data-par></div><h3>残置物撤去<small>CLEAR-OUT</small></h3><p>解体前の家財撤去、遺品整理、ごみ屋敷の片付けまで。</p></article>
+        <article class="mcard rv"><div class="ph clip"><img src="img/bassai-2.jpg" alt="ロープを使った高木の特殊伐採" loading="lazy" data-par></div><h3>伐採・特殊伐採<small>TREE WORK</small></h3><p>敷地の樹木伐採、重機の入らない高木の特殊伐採、草刈り。</p></article>
+        <article class="mcard rv"><div class="ph clip"><img src="img/sash-after.jpg" alt="補修と清掃を終えた室内の窓まわり" loading="lazy" data-par></div><h3>原状回復工事<small>RESTORATION</small></h3><p>賃貸物件のクロス・床・建具の補修や小修理。</p></article>
+        <article class="mcard rv"><div class="ph clip"><img src="img/sash-before.jpg" alt="清掃前のサッシ" loading="lazy" data-par></div><h3>清掃<small>CLEANING</small></h3><p>退去後の空室清掃、工事後の仕上げ清掃、エアコン・水回り。</p></article>
+      </div>
+      <div class="pm rv">
+        <div>
+          <p class="label"><i></i>For property managers</p>
+          <h3 style="margin-top:14px">不動産管理会社さまへ</h3>
+          <p>退去後の残置物撤去、原状回復工事、クリーニングを1室からまとめてお受けしています。老朽化した物件の解体まで、同じ窓口でご相談いただけます。</p>
+          <div class="chain"><span>退去</span><i>→</i><span>残置物撤去</span><i>→</i><span>原状回復</span><i>→</i><span>清掃</span><i>→</i><span>次の入居</span></div>
+        </div>
+        <a class="btn" href="#contact" data-kind="k2">法人のご相談<span class="ar"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="works" id="works" aria-labelledby="wkTitle">
+    <div class="wrap">
+      <div class="types-head">
+        <div>
+          <p class="label"><i></i>Works</p>
+          <h2 class="h2 lines" id="wkTitle" style="margin-top:24px"><span class="ln"><span>施工事例</span></span></h2>
+        </div>
+        <p class="rv">写真の上で左右にドラッグすると、施工前と施工後を見比べられます。</p>
+      </div>
+      <div class="wgrid">
+        <article class="case c1 rv">
+          <div class="ba" style="--p:50%">
+            <img src="img/zanchi-before.jpg" alt="施工前：ごみが積まれたベランダ" loading="lazy">
+            <img class="after" src="img/zanchi-after.jpg" alt="施工後：撤去を終えたベランダ" loading="lazy">
+            <span class="bar"></span><span class="knob">DRAG</span>
+            <span class="tag l">BEFORE</span><span class="tag r">AFTER</span>
+            <input type="range" min="0" max="100" value="50" id="ba1" aria-label="施工前と施工後の比較">
+          </div>
+          <div class="cap"><h3>残置物撤去</h3><span class="mono">Iida, Nagano</span></div>
+        </article>
+        <article class="case c2 rv">
+          <div class="ba" style="--p:50%">
+            <img src="img/sash-before.jpg" alt="施工前：汚れの残るサッシ枠" loading="lazy">
+            <img class="after" src="img/sash-after.jpg" alt="施工後：清掃したサッシ枠" loading="lazy">
+            <span class="bar"></span><span class="knob">DRAG</span>
+            <span class="tag l">BEFORE</span><span class="tag r">AFTER</span>
+            <input type="range" min="0" max="100" value="50" id="ba2" aria-label="施工前と施工後の比較">
+          </div>
+          <div class="cap"><h3>サッシ枠清掃</h3><span class="mono">Cleaning</span></div>
+        </article>
+        <article class="case c3 rv">
+          <div class="ph2"><img src="img/bassai-1.jpg" alt="住宅に覆いかぶさる高木" loading="lazy" data-par></div>
+          <div class="cap"><h3>特殊伐採</h3><span class="mono">Tree work</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="msg" aria-labelledby="msgTitle">
+    <div class="wrap">
+      <p class="label"><i></i>Message</p>
+      <div class="grid">
+        <blockquote class="lines" id="msgTitle"><span class="ln"><span>壊して終わり、</span></span><span class="ln"><span>ではなく、</span></span><span class="ln"><span><em>つぎの始まり</em>まで</span></span><span class="ln"><span>責任を持つ。</span></span></blockquote>
+        <div>
+          <div class="body rv">
+            <p>TENDOUは、暮らしの困りごとを引き受ける便利屋として始まりました。草刈り、片付け、清掃、修繕と現場を重ねるうちに、いちばん多くご相談いただくようになったのが建物の解体です。</p>
+            <p>解体の現場には、家財の片付けも、樹木の伐採も、工事後の清掃もついてきます。便利屋として身につけた幅広い対応力があるから、工程ごとに業者を分けず、ひとつの窓口で最後までお引き受けできます。</p>
+            <p>小さなご縁を、大きな信頼に。土地の「つぎ」をつくる会社として、一件一件に丁寧に向き合ってまいります。</p>
+          </div>
+          <div class="sign rv"><img src="img/logo-light.png" alt=""><div><span class="mono">TENDOU / Representative</span><b>市岡 瞬</b></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="company" id="company" aria-labelledby="coTitle">
+    <div class="wrap grid">
+      <div>
+        <p class="label"><i></i>Company</p>
+        <h2 class="h2" id="coTitle" style="margin-top:24px">会社概要</h2>
+      </div>
+      <dl class="tbl">
+        <div class="rv"><dt>商号</dt><dd>TENDOU</dd></div>
+        <div class="rv"><dt>代表者</dt><dd>市岡 瞬</dd></div>
+        <div class="rv"><dt>所在地</dt><dd>〒507-0048 岐阜県多治見市昭栄町90-19</dd></div>
+        <div class="rv"><dt>電話番号</dt><dd>090-6164-3039</dd></div>
+        <div class="rv"><dt>メール</dt><dd>tendou122114@gmail.com</dd></div>
+        <div class="rv"><dt>事業内容</dt><dd><ul><li class="main">解体工事（建物解体・内装解体・外構撤去）</li><li>残置物撤去・不用品回収・遺品整理</li><li>伐採・特殊伐採・草刈り</li><li>原状回復工事・内装修繕</li><li>ハウスクリーニング・清掃</li></ul></dd></div>
+        <div class="rv"><dt>対応エリア</dt><dd>多治見市・土岐市・瑞浪市・可児市を中心に、岐阜県全域・愛知県・長野県</dd></div>
+        <div class="rv"><dt>定休日</dt><dd>日曜日（緊急のご相談はお電話ください）</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="recruit" id="recruit" aria-labelledby="rTitle">
+    <div class="big" aria-hidden="true">JOIN</div>
+    <div class="wrap grid">
+      <div>
+        <p class="label"><i></i>Recruit</p>
+        <h2 class="h2 lines" id="rTitle" style="margin-top:24px"><span class="ln"><span>現場で、</span></span><span class="ln"><span>手に職をつける。</span></span></h2>
+      </div>
+      <div class="rv">
+        <p>解体を中心に、伐採・清掃・内装まで幅広い現場を経験できます。未経験の方も、先輩と一緒に現場で覚えていけます。</p>
+        <div class="tags"><span>未経験歓迎</span><span>正社員・アルバイト</span><span>日曜定休</span><span>普通免許あれば尚可</span></div>
+        <a class="btn" href="#contact" data-kind="k5">応募・お問い合わせ<span class="ar"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="fTitle">
+    <div class="wrap grid">
+      <div>
+        <p class="label"><i></i>FAQ</p>
+        <h2 class="h2" id="fTitle" style="margin-top:24px">よくある<br>ご質問</h2>
+      </div>
+      <div id="faqList">
+        <details><summary><span class="q">Q.</span><span>見積りや現地調査に費用はかかりますか？</span><span class="pm" aria-hidden="true"></span></summary><p class="a">無料です。お見積りの内容にご納得いただいてから正式にご契約となります。</p></details>
+        <details><summary><span class="q">Q.</span><span>家財が残ったままでも解体を頼めますか？</span><span class="pm" aria-hidden="true"></span></summary><p class="a">はい。残置物の撤去から解体までまとめてお引き受けできます。現地調査の際に残っている物の量も確認します。</p></details>
+        <details><summary><span class="q">Q.</span><span>解体後の土地はどのような状態で引き渡されますか？</span><span class="pm" aria-hidden="true"></span></summary><p class="a">建物と基礎、地中の障害物を撤去したうえで整地してお引渡しします。仕上げの状態はご希望に合わせてご相談ください。</p></details>
+        <details><summary><span class="q">Q.</span><span>どのエリアまで対応していますか？</span><span class="pm" aria-hidden="true"></span></summary><p class="a">岐阜県多治見市を拠点に、土岐市・瑞浪市・可児市を中心とした東濃エリア、岐阜県全域、愛知県、長野県まで対応しています。エリア外の方も一度ご相談ください。</p></details>
+        <details><summary><span class="q">Q.</span><span>不動産管理会社として継続的に依頼できますか？</span><span class="pm" aria-hidden="true"></span></summary><p class="a">はい。退去後の残置物撤去・原状回復工事・クリーニングを1室単位から継続的にお受けしています。</p></details>
+        <details><summary><span class="q">Q.</span><span>急ぎの対応はできますか？</span><span class="pm" aria-hidden="true"></span></summary><p class="a">日曜日は定休日ですが、緊急のトラブルには対応いたします。お急ぎの場合はお電話（090-6164-3039）でご連絡ください。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="ctTitle">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="label"><i></i>Contact</p>
+          <h2 class="h2 lines" id="ctTitle" style="margin-top:24px"><span class="ln"><span>まずは、現地を</span></span><span class="ln"><span>見せてください。</span></span></h2>
+          <p class="rv" style="color:var(--mute);margin-top:20px">現地調査・お見積りは無料です。お急ぎの場合はお電話が確実です。</p>
+        </div>
+        <div class="rv">
+          <div class="tel">
+            <span class="mono" style="color:var(--mute)">Tel — 月〜土 受付</span>
+            <a class="num" href="tel:09061643039" id="telNum">090-6164-3039</a>
+            <div class="row"><span>日曜定休・緊急時はお電話ください</span><button class="copy" type="button" data-copy="090-6164-3039">番号をコピー</button></div>
+          </div>
+          <div class="alt">
+            <a class="btn" href="https://lin.ee/fWkDsC0U" target="_blank" rel="noopener">LINEで相談<span class="ar"></span></a>
+            <a class="btn" href="https://www.instagram.com/ten.dou1010" target="_blank" rel="noopener">Instagram<span class="ar"></span></a>
+          </div>
+        </div>
+      </div>
+
+      <form class="f" id="form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <!-- web3forms のアクセスキーを取得して差し替えてください（https://web3forms.com） -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="【TENDOU】ホームページからのお問い合わせ">
+        <fieldset class="full">
+          <legend>ご相談内容<span class="req">REQUIRED</span></legend>
+          <div class="chips">
+            <label><input type="radio" name="kind" id="k1" value="解体工事" checked><span>解体工事</span></label>
+            <label><input type="radio" name="kind" id="k3" value="残置物撤去・片付け"><span>残置物撤去・片付け</span></label>
+            <label><input type="radio" name="kind" id="k4" value="伐採・草刈り"><span>伐採・草刈り</span></label>
+            <label><input type="radio" name="kind" id="k2" value="原状回復・清掃（法人）"><span>原状回復・清掃（法人）</span></label>
+            <label><input type="radio" name="kind" id="k5" value="採用について"><span>採用について</span></label>
+            <label><input type="radio" name="kind" id="k6" value="その他"><span>その他</span></label>
+          </div>
+        </fieldset>
+        <div>
+          <label for="structure">建物の構造</label>
+          <select id="structure" name="structure">
+            <option value="">分からない・該当なし</option><option>木造</option><option>鉄骨造</option><option>RC造（鉄筋コンクリート）</option><option>店舗・事務所の内装</option><option>ブロック塀・外構のみ</option>
+          </select>
+        </div>
+        <div><label for="place">物件の所在地（市区町村まで）</label><input type="text" id="place" name="place" placeholder="岐阜県多治見市"></div>
+        <div><label for="name">お名前<span class="req">REQUIRED</span></label><input type="text" id="name" name="name" autocomplete="name" required></div>
+        <div><label for="org">会社名（法人の方）</label><input type="text" id="org" name="company" autocomplete="organization"></div>
+        <div><label for="tel">電話番号<span class="req">REQUIRED</span></label><input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="090-0000-0000" required></div>
+        <div><label for="email">メールアドレス</label><input type="email" id="email" name="email" autocomplete="email"></div>
+        <div class="full"><label for="message">ご相談内容の詳細</label><textarea id="message" name="message" placeholder="築45年の木造2階建て（約30坪）の解体を検討しています。家財が少し残っています。"></textarea></div>
+        <div class="full">
+          <label class="agree" for="agree"><input type="checkbox" id="agree" name="agree" required>個人情報の取り扱いに同意する</label>
+          <details class="pnote"><summary>個人情報の取り扱いについて</summary><p style="margin-top:8px">お預かりした個人情報は、お問い合わせへの回答、お見積り、工事のご連絡のためにのみ使用し、法令に基づく場合を除き第三者に提供することはありません。</p></details>
+        </div>
+        <div class="full submit">
+          <button class="btn solid" type="submit">送信する<span class="ar"></span></button>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <img src="img/logo-light.png" alt="TENDOU">
+        <p style="margin-top:16px">岐阜県多治見市の解体工事業者。<br>片付けから更地まで、窓口ひとつで。</p>
+      </div>
+      <div><h4>MENU</h4><ul><li><a href="#types">解体工事</a></li><li><a href="#why">選ばれる理由</a></li><li><a href="#process">工事の流れ</a></li><li><a href="#more">付帯サービス</a></li><li><a href="#works">施工事例</a></li><li><a href="#company">会社概要</a></li><li><a href="#faq">よくあるご質問</a></li></ul></div>
+      <div><h4>CONTACT</h4><ul><li>〒507-0048<br>岐阜県多治見市昭栄町90-19</li><li>TEL 090-6164-3039</li><li>tendou122114@gmail.com</li><li><a href="https://lin.ee/fWkDsC0U" target="_blank" rel="noopener">LINE</a> / <a href="https://www.instagram.com/ten.dou1010" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    </div>
+    <div class="mega" id="mega" aria-hidden="true"><span>T</span><span>E</span><span>N</span><span>D</span><span>O</span><span>U</span></div>
+    <div class="bottom mono"><span>© TENDOU</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<div class="callbar" id="callbar"><a href="tel:09061643039">電話する</a><a href="#contact">無料見積り</a></div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
